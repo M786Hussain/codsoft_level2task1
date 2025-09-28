@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux'
 
 const AppliedJobTable = () => {
     const {allAppliedJobs} = useSelector(store=>store.job);
+    // console.log("Applied jobs:", allAppliedJobs);
+    const jobs = Array.isArray(allAppliedJobs) ? allAppliedJobs : [];
     return (
         <div>
             <Table>
@@ -19,7 +21,7 @@ const AppliedJobTable = () => {
                 </TableHeader>
                 <TableBody>
                     {
-                        allAppliedJobs.length <= 0 ? <span>You haven't  applied any job yet.</span> : allAppliedJobs.map((appliedJob) => (
+                        jobs.length <= 0 ? <span>You haven't  applied any job yet.</span> : jobs.map((appliedJob) => (
                             <TableRow key={appliedJob._id}>
                                 <TableCell>{appliedJob?.createdAt?.split("T")[0]}</TableCell>
                                 <TableCell>{appliedJob.job?.title}</TableCell>

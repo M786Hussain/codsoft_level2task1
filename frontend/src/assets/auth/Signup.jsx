@@ -157,7 +157,7 @@ function Signup() {
             loading ? <Button className="w-full my-4"><Loader2 className="mr-2 h-4  w-4 animate-spin" />Please wait</Button>:
             <Button type="submit" className="w-full my-4">SignUp</Button>
           }
-          <p>Already have an acount..? <Link to="/login" className="text-green-600">Login</Link></p>
+          <p>Already have an acount..? <Link to="/login" className="text-yellow-400">Login</Link></p>
         </form>
         
       </div>

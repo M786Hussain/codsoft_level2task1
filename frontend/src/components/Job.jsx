@@ -49,7 +49,7 @@ const  Job = ({job}) => {
 
 
        <div className="flex items-center gap-2 mt-4">
-        <Badge className={"text-blue-700 font-bold"} variant="ghost">{job?.position}
+        <Badge className={"text-green-700 font-bold"} variant="ghost">{job?.position}
            Positions
         </Badge>
         <Badge className={"text-[#F83002] font-bold"} variant="ghost">
@@ -62,7 +62,7 @@ const  Job = ({job}) => {
 
       <div className='flex items-center gap-4 mt-4'>
         <Button variant="outline"  onClick={()=> navigate(`/description/${job?._id}`)}>Detail</Button>
-        <Button className="bg-[#7209b7]">Save for later</Button>
+        <Button className="bg-green-500">Save for later</Button>
       </div>
         
     </div>
